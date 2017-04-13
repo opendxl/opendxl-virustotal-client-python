@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>dxlvtapiclient.client module &#8212; VirusTotal API DXL Client Library 0.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="dxlvtapiclient package" href="dxlvtapiclient.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dxlvtapiclient.html" title="dxlvtapiclient package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">VirusTotal API DXL Client Library 0.0.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="dxlvtapiclient.html" accesskey="U">dxlvtapiclient package</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-dxlvtapiclient.client">
+<span id="dxlvtapiclient-client-module"></span><h1>dxlvtapiclient.client module<a class="headerlink" href="#module-dxlvtapiclient.client" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="dxlvtapiclient.client.VirusTotalApiClient">
+<em class="property">class </em><code class="descclassname">dxlvtapiclient.client.</code><code class="descname">VirusTotalApiClient</code><span class="sig-paren">(</span><em>dxl_client</em><span class="sig-paren">)</span><a class="headerlink" href="#dxlvtapiclient.client.VirusTotalApiClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">dxlbootstrap.client.Client</span></code></p>
+<p>The VirusTotal DXL Python client library provides a high level wrapper for invoking the VirusTotal API via the
+Data Exchange Layer (DXL) fabric.</p>
+<p>Constructor parameters:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dxl_client</strong> &#8211; The DXL client to use for communication with the fabric</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="dxlvtapiclient.client.VirusTotalApiClient.domain_report">
+<code class="descname">domain_report</code><span class="sig-paren">(</span><em>domain</em><span class="sig-paren">)</span><a class="headerlink" href="#dxlvtapiclient.client.VirusTotalApiClient.domain_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a report on the specified domain. See <a class="reference external" href="https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#domain-report">this page</a>
+for more information.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>domain</strong> &#8211; A domain name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Returns a dictionary (<code class="docutils literal"><span class="pre">dict</span></code>) containing the response information. See <a class="reference external" href="https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#domain-report">this page</a>
+for more information.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="dxlvtapiclient.client.VirusTotalApiClient.file_report">
+<code class="descname">file_report</code><span class="sig-paren">(</span><em>resource</em>, <em>all_info=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dxlvtapiclient.client.VirusTotalApiClient.file_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves an existing file scan report for the specified file(s). See <a class="reference external" href="https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#file-report">this page</a>
+for more information.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>resource</strong> &#8211; An md5/sha1/sha256 hash of a file for which to retrieve the most recent antivirus
+report. A scan identifier (sha256-timestamp as returned by the scan API) can be specified to access a
+specific report. Multiple hashes/identifiers can be specified via a Python <code class="docutils literal"><span class="pre">list</span></code>.</li>
+<li><strong>all_info</strong> &#8211; [<code class="docutils literal"><span class="pre">private</span> <span class="pre">api</span></code> <code class="docutils literal"><span class="pre">optional</span></code>] : Specifying <code class="docutils literal"><span class="pre">True</span></code> will cause additional information to be included with
+the response (This includes the output of several tools acting on the file).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>Returns a dictionary (<code class="docutils literal"><span class="pre">dict</span></code>) containing the response information. See <a class="reference external" href="https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#file-report">this page</a>
+for more information.</p>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="dxlvtapiclient.client.VirusTotalApiClient.file_rescan">
+<code class="descname">file_rescan</code><span class="sig-paren">(</span><em>resource</em>, <em>date=None</em>, <em>period=None</em>, <em>repeat=None</em>, <em>notify_url=None</em>, <em>notify_changes_only=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dxlvtapiclient.client.VirusTotalApiClient.file_rescan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rescans existing files in VirusTotal&#8217;s file store without resubmitting them. See <a class="reference external" href="https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#file-rescan">this page</a>
+for more information.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>resource</strong> &#8211; An md5/sha1/sha256 hash. Multiple hashes/identifiers can be specified via a Python <code class="docutils literal"><span class="pre">list</span></code>.</li>
+<li><strong>date</strong> &#8211; [<code class="docutils literal"><span class="pre">private</span> <span class="pre">api</span></code> <code class="docutils literal"><span class="pre">optional</span></code>] : When the rescan should be performed. If not specified the rescan
+will be performed immediately. This can be specified as a <code class="docutils literal"><span class="pre">datetime.datetime</span></code> value or as a string.
+If specified as a string, the date must be specified using the <code class="docutils literal"><span class="pre">%Y%m%d%H%M%S</span></code> format
+(For example: <code class="docutils literal"><span class="pre">20120725170000</span></code>).</li>
+<li><strong>period</strong> &#8211; [<code class="docutils literal"><span class="pre">private</span> <span class="pre">api</span></code> <code class="docutils literal"><span class="pre">optional</span></code>] : Periodicity (in days) with which the file should be rescanned. If
+this argument is provided the file will be rescanned periodically every period days, if not, the rescan is
+performed once and not repeated again.</li>
+<li><strong>repeat</strong> &#8211; [<code class="docutils literal"><span class="pre">private</span> <span class="pre">api</span></code> <code class="docutils literal"><span class="pre">optional</span></code>] : Used in conjunction with period to specify the number of times the
+file should be rescanned. If this argument is provided the file will be rescanned the given amount of times
+in coherence with the chosen periodicity, if not, the file will be rescanned indefinitely.</li>
+<li><strong>notify_url</strong> &#8211; [<code class="docutils literal"><span class="pre">private</span> <span class="pre">api</span></code> <code class="docutils literal"><span class="pre">optional</span></code>] : A URL to which a POST notification should be sent when the
+rescan finishes.</li>
+<li><strong>notify_changes_only</strong> &#8211; [<code class="docutils literal"><span class="pre">private</span> <span class="pre">api</span></code> <code class="docutils literal"><span class="pre">optional</span></code>] : Used in conjunction with <code class="docutils literal"><span class="pre">notify_url</span></code>. Specifying
+<code class="docutils literal"><span class="pre">True</span></code> indicates that POST notifications should only be sent if the scan results differ from the previous
+one.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>Returns a dictionary (<code class="docutils literal"><span class="pre">dict</span></code>) containing the response information. See <a class="reference external" href="https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#file-rescan">this page</a>
+for more information.</p>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="dxlvtapiclient.client.VirusTotalApiClient.ip_report">
+<code class="descname">ip_report</code><span class="sig-paren">(</span><em>ip</em><span class="sig-paren">)</span><a class="headerlink" href="#dxlvtapiclient.client.VirusTotalApiClient.ip_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a report on the specified IP address. See <a class="reference external" href="https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#ip-address-report">this page</a>
+for more information.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ip</strong> &#8211; A valid IPv4 address in dotted quad notation.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Returns a dictionary (<code class="docutils literal"><span class="pre">dict</span></code>) containing the response information. See <a class="reference external" href="https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#ip-address-report">this page</a>
+for more information.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="dxlvtapiclient.client.VirusTotalApiClient.url_report">
+<code class="descname">url_report</code><span class="sig-paren">(</span><em>resource</em>, <em>scan=None</em>, <em>all_info=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dxlvtapiclient.client.VirusTotalApiClient.url_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves an existing scan report for the specified URL(s). See <a class="reference external" href="https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#url-report">this page</a>
+for more information.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>resource</strong> &#8211; Retrieves the most recent report for the specified URL. A scan identifier (sha256-timestamp as
+returned by the URL submission API) can be specified to access a specific report. Multiple URLs/identifiers
+can be specified via a Python <code class="docutils literal"><span class="pre">list</span></code>.</li>
+<li><strong>scan</strong> &#8211; [<code class="docutils literal"><span class="pre">optional</span></code>] : Specifying <code class="docutils literal"><span class="pre">True</span></code> will automatically submit the URL for analysis if no report is
+found for it in the VirusTotal database. In this case the result will contain a <code class="docutils literal"><span class="pre">scan_id</span></code> field that can
+be used to query the analysis report later on.</li>
+<li><strong>all_info</strong> &#8211; [<code class="docutils literal"><span class="pre">private</span> <span class="pre">api</span></code> <code class="docutils literal"><span class="pre">optional</span></code>] : Specifying <code class="docutils literal"><span class="pre">True</span></code> will cause additional information to be
+included with the response (This includes the output of several tools acting on the URL).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>Returns a dictionary (<code class="docutils literal"><span class="pre">dict</span></code>) containing the response information. See <a class="reference external" href="https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#url-report">this page</a>
+for more information.</p>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="dxlvtapiclient.client.VirusTotalApiClient.url_scan">
+<code class="descname">url_scan</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#dxlvtapiclient.client.VirusTotalApiClient.url_scan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Submits a URL for scanning. See <a class="reference external" href="https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#url-scan">this page</a>
+for more information.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>url</strong> &#8211; The URL to be scanned. Multiple URLs can be specified via a Python <code class="docutils literal"><span class="pre">list</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Returns a dictionary (<code class="docutils literal"><span class="pre">dict</span></code>) containing the response information. See <a class="reference external" href="https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#url-scan">this page</a>
+for more information.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="dxlvtapiclient.html"
+                        title="previous chapter">dxlvtapiclient package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/dxlvtapiclient.client.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dxlvtapiclient.html" title="dxlvtapiclient package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">VirusTotal API DXL Client Library 0.0.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="dxlvtapiclient.html" >dxlvtapiclient package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Copyright 2017, McAfee LLC.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3.
+    </div>
+  </body>
+</html>

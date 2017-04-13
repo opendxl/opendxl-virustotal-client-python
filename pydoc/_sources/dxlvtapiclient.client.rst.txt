@@ -1,0 +1,7 @@
+dxlvtapiclient.client module
+============================
+
+.. automodule:: dxlvtapiclient.client
+    :members:
+    :undoc-members:
+    :show-inheritance:

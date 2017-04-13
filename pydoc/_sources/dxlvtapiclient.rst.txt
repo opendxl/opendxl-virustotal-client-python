@@ -1,0 +1,17 @@
+dxlvtapiclient package
+======================
+
+Submodules
+----------
+
+.. toctree::
+
+   dxlvtapiclient.client
+
+Module contents
+---------------
+
+.. automodule:: dxlvtapiclient
+    :members:
+    :undoc-members:
+    :show-inheritance:
