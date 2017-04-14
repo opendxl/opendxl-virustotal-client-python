@@ -258,7 +258,7 @@ class VirusTotalApiClient(Client):
         Rescans existing files in VirusTotal's file store without resubmitting them. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#file-rescan>`_
         for more information.
 
-        :param resource: An md5/sha1/sha256 hash. Multiple hashes/identifiers can be specified via a Python ``list``.
+        :param resource: An md5/sha1/sha256 hash. Multiple hashes can be specified via a Python ``list``.
         :param date: [``private api`` ``optional``] : When the rescan should be performed. If not specified the rescan
             will be performed immediately. This can be specified as a ``datetime.datetime`` value or as a string.
             If specified as a string, the date must be specified using the ``%Y%m%d%H%M%S`` format
