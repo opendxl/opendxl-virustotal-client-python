@@ -236,7 +236,7 @@ class VirusTotalApiClient(Client):
 
     def file_report(self, resource, all_info=None):
         """
-        Retrieves an existing file scan report for the specified file(s). See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#file-report>`_
+        Retrieves an existing file scan report for the specified file(s). See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#file-report>`__
         for more information.
 
         :param resource: An md5/sha1/sha256 hash of a file for which to retrieve the most recent antivirus
@@ -244,7 +244,7 @@ class VirusTotalApiClient(Client):
             specific report. Multiple hashes/identifiers can be specified via a Python ``list``.
         :param all_info: [``private api`` ``optional``] : Specifying ``True`` will cause additional information to be included with
             the response (This includes the output of several tools acting on the file).
-        :return: Returns a dictionary (``dict``) containing the response information. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#file-report>`_
+        :return: Returns a dictionary (``dict``) containing the response information. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#file-report>`__
             for more information.
         """
         req_dict = {}
@@ -255,7 +255,7 @@ class VirusTotalApiClient(Client):
 
     def file_rescan(self, resource, date=None, period=None, repeat=None, notify_url=None, notify_changes_only=None):
         """
-        Rescans existing files in VirusTotal's file store without resubmitting them. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#file-rescan>`_
+        Rescans existing files in VirusTotal's file store without resubmitting them. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#file-rescan>`__
         for more information.
 
         :param resource: An md5/sha1/sha256 hash. Multiple hashes can be specified via a Python ``list``.
@@ -274,7 +274,7 @@ class VirusTotalApiClient(Client):
         :param notify_changes_only: [``private api`` ``optional``] : Used in conjunction with ``notify_url``. Specifying
             ``True`` indicates that POST notifications should only be sent if the scan results differ from the previous
             one.
-        :return: Returns a dictionary (``dict``) containing the response information. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#file-rescan>`_
+        :return: Returns a dictionary (``dict``) containing the response information. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#file-rescan>`__
             for more information.
         """
         req_dict = {}
@@ -300,7 +300,7 @@ class VirusTotalApiClient(Client):
             be used to query the analysis report later on.
         :param all_info: [``private api`` ``optional``] : Specifying ``True`` will cause additional information to be
             included with the response (This includes the output of several tools acting on the URL).
-        :return: Returns a dictionary (``dict``) containing the response information. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#url-report>`_
+        :return: Returns a dictionary (``dict``) containing the response information. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#url-report>`__
             for more information.
         """
         req_dict = {}
@@ -312,11 +312,11 @@ class VirusTotalApiClient(Client):
 
     def url_scan(self, url):
         """
-        Submits a URL for scanning. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#url-scan>`_
+        Submits a URL for scanning. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#url-scan>`__
         for more information.
 
         :param url: The URL to be scanned. Multiple URLs can be specified via a Python ``list``.
-        :return: Returns a dictionary (``dict``) containing the response information. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#url-scan>`_
+        :return: Returns a dictionary (``dict``) containing the response information. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#url-scan>`__
             for more information.
         """
         req_dict = {}
@@ -326,11 +326,11 @@ class VirusTotalApiClient(Client):
 
     def ip_report(self, ip):
         """
-        Retrieves a report on the specified IP address. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#ip-address-report>`_
+        Retrieves a report on the specified IP address. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#ip-address-report>`__
         for more information.
 
         :param ip: A valid IPv4 address in dotted quad notation.
-        :return: Returns a dictionary (``dict``) containing the response information. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#ip-address-report>`_
+        :return: Returns a dictionary (``dict``) containing the response information. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#ip-address-report>`__
             for more information.
         """
         req_dict = {}
@@ -340,11 +340,11 @@ class VirusTotalApiClient(Client):
 
     def domain_report(self, domain):
         """
-        Retrieves a report on the specified domain. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#domain-report>`_
+        Retrieves a report on the specified domain. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#domain-report>`__
         for more information.
 
         :param domain: A domain name.
-        :return: Returns a dictionary (``dict``) containing the response information. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#domain-report>`_
+        :return: Returns a dictionary (``dict``) containing the response information. See `this page <https://github.com/opendxl/opendxl-virustotal-service-python/wiki/Service-Methods#domain-report>`__
             for more information.
         """
         req_dict = {}
