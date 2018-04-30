@@ -2,6 +2,8 @@
 #
 # See: https://www.virustotal.com/en/documentation/public-api/#getting-url-scans
 
+from __future__ import absolute_import
+from __future__ import print_function
 import os
 import sys
 
@@ -40,5 +42,5 @@ with DxlClient(config) as dxl_client:
     resp_dict = client.url_report("http://www.virustotal.com")
 
     # Print out the response (convert dictionary to JSON for pretty printing)
-    print "Response:\n{0}".format(
-        MessageUtils.dict_to_json(resp_dict, pretty_print=True))
+    print("Response:\n{0}".format(
+        MessageUtils.dict_to_json(resp_dict, pretty_print=True)))
