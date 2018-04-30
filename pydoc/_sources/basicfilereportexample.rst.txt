@@ -85,8 +85,8 @@ The majority of the sample code is shown below:
             resp_dict = client.file_report("7657fcb7d772448a6d8504e4b20168b8")
 
             # Print out the response (convert dictionary to JSON for pretty printing)
-            print "Response:\n{0}".format(
-                MessageUtils.dict_to_json(resp_dict, pretty_print=True))
+            print("Response:\n{0}".format(
+                MessageUtils.dict_to_json(resp_dict, pretty_print=True)))
 
 
 Once a connection is established to the DXL fabric, a :class:`dxlvtapiclient.client.VirusTotalApiClient` instance is
