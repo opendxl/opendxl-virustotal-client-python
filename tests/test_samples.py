@@ -13,7 +13,7 @@ class TestSamples(BaseClientTest):
             dxl_client.connect()
 
             with MockVtService(dxl_client):
-                mock_print = BaseClientTest.run_sample(sample_filename)
+                mock_print = self.run_sample(sample_filename)
 
                 mock_print.assert_any_call(
                     StringDoesNotContain("Error")
@@ -38,13 +38,13 @@ class TestSamples(BaseClientTest):
             dxl_client.connect()
 
             with MockVtService(dxl_client):
-                mock_print = BaseClientTest.run_sample(sample_filename)
+                mock_print = self.run_sample(sample_filename)
 
                 mock_print.assert_any_call(
                     StringDoesNotContain("Error")
                 )
 
-                # Validate whois_timestamp from report
+                # Validate md5 from report
                 mock_print.assert_any_call(
                     StringContains(
                         str(SAMPLE_FILE_REPORT["md5"])
@@ -63,13 +63,13 @@ class TestSamples(BaseClientTest):
             dxl_client.connect()
 
             with MockVtService(dxl_client):
-                mock_print = BaseClientTest.run_sample(sample_filename)
+                mock_print = self.run_sample(sample_filename)
 
                 mock_print.assert_any_call(
                     StringDoesNotContain("Error")
                 )
 
-                # Validate whois_timestamp from report
+                # Validate scan_id from report
                 mock_print.assert_any_call(
                     StringContains(
                         str(SAMPLE_FILE_RESCAN["scan_id"])
@@ -88,13 +88,13 @@ class TestSamples(BaseClientTest):
             dxl_client.connect()
 
             with MockVtService(dxl_client):
-                mock_print = BaseClientTest.run_sample(sample_filename)
+                mock_print = self.run_sample(sample_filename)
 
                 mock_print.assert_any_call(
                     StringDoesNotContain("Error")
                 )
 
-                # Validate whois_timestamp from report
+                # Validate asn from report
                 mock_print.assert_any_call(
                     StringContains(
                         str(SAMPLE_IP_ADDRESS_REPORT["asn"])
@@ -113,13 +113,13 @@ class TestSamples(BaseClientTest):
             dxl_client.connect()
 
             with MockVtService(dxl_client):
-                mock_print = BaseClientTest.run_sample(sample_filename)
+                mock_print = self.run_sample(sample_filename)
 
                 mock_print.assert_any_call(
                     StringDoesNotContain("Error")
                 )
 
-                # Validate whois_timestamp from report
+                # Validate scan_id from report
                 mock_print.assert_any_call(
                     StringContains(
                         str(SAMPLE_URL_REPORT["scan_id"])
@@ -138,13 +138,13 @@ class TestSamples(BaseClientTest):
             dxl_client.connect()
 
             with MockVtService(dxl_client):
-                mock_print = BaseClientTest.run_sample(sample_filename)
+                mock_print = self.run_sample(sample_filename)
 
                 mock_print.assert_any_call(
                     StringDoesNotContain("Error")
                 )
 
-                # Validate whois_timestamp from report
+                # Validate scan_id from report
                 mock_print.assert_any_call(
                     StringContains(
                         str(SAMPLE_URL_SCAN["scan_id"])

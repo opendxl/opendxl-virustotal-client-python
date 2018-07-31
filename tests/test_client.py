@@ -49,6 +49,8 @@ class TestRunCommand(BaseClientTest):
 
                 result = vt_client.file_report(SAMPLE_FILE)
 
+                # Mock server always provides received params for this API call
+                del result[RECEIVED_PARAMS_KEY]
                 self.assertDictEqual(result, SAMPLE_FILE_REPORT)
 
             dxl_client.disconnect()
@@ -71,6 +73,8 @@ class TestRunCommand(BaseClientTest):
                     result[RECEIVED_PARAMS_KEY][VirusTotalApiClient._PARAM_ALLINFO]
                 )
 
+                # Mock server always provides received params for this API call
+                del result[RECEIVED_PARAMS_KEY]
                 self.assertDictEqual(result, SAMPLE_FILE_REPORT)
 
             dxl_client.disconnect()
@@ -86,6 +90,8 @@ class TestRunCommand(BaseClientTest):
 
                 result = vt_client.file_rescan(SAMPLE_FILE)
 
+                # Mock server always provides received params for this API call
+                del result[RECEIVED_PARAMS_KEY]
                 self.assertDictEqual(result, SAMPLE_FILE_RESCAN)
 
             dxl_client.disconnect()
@@ -132,8 +138,9 @@ class TestRunCommand(BaseClientTest):
                     result[RECEIVED_PARAMS_KEY][VirusTotalApiClient._PARAM_NOTIFY_CHANGES_ONLY]
                 )
 
+                # Mock server always provides received params for this API call
+                del result[RECEIVED_PARAMS_KEY]
                 self.assertDictEqual(result, SAMPLE_FILE_RESCAN)
-
 
             dxl_client.disconnect()
 
@@ -162,6 +169,8 @@ class TestRunCommand(BaseClientTest):
             with MockVtService(dxl_client):
                 result = vt_client.url_report(SAMPLE_URL)
 
+                # Mock server always provides received params for this API call
+                del result[RECEIVED_PARAMS_KEY]
                 self.assertDictEqual(result, SAMPLE_URL_REPORT)
 
             dxl_client.disconnect()
@@ -188,6 +197,8 @@ class TestRunCommand(BaseClientTest):
                     result[RECEIVED_PARAMS_KEY][VirusTotalApiClient._PARAM_ALLINFO]
                 )
 
+                # Mock server always provides received params for this API call
+                del result[RECEIVED_PARAMS_KEY]
                 self.assertDictEqual(result, SAMPLE_URL_REPORT)
 
             dxl_client.disconnect()
@@ -330,7 +341,7 @@ class TestAddParams(BaseClientTest):
         sample_dict = {'test': None}
         VirusTotalApiClient._add_boolean_param_by_name(sample_dict, 'does_not_exist', False)
         with self.assertRaises(KeyError):
-            print(sample_dict['does_not_exist']) #pylint: disable=superfluous-parens
+            sample_dict['does_not_exist'] #pylint: disable=pointless-statement
 
 
     def test_addparambyname_boolfalse(self):
@@ -349,7 +360,7 @@ class TestAddParams(BaseClientTest):
         sample_dict = {'test': None}
         VirusTotalApiClient._add_string_param_by_name(sample_dict, 'does_not_exist', None)
         with self.assertRaises(KeyError):
-            print(sample_dict['does_not_exist']) #pylint: disable=superfluous-parens
+            sample_dict['does_not_exist'] #pylint: disable=pointless-statement
 
 
     def test_addparambyname_string_null(self):
