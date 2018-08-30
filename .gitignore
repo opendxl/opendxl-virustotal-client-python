@@ -4,3 +4,7 @@ sample/dxlclient.config
 *.pyc
 build/
 dxlvtapiclient.egg-info/
+*.csr
+*.key
+*.crt
+tests/*.config
